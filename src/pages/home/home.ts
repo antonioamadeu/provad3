@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ɵConsole } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  nome = "";
+
   constructor(public navCtrl: NavController) {
 
   }
+
+public onAddClick(nome){
+  console.log("teste"+ nome);
+  this.navCtrl.push('ChatPage', {nome});
+};
 
 }
